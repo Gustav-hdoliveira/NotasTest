@@ -51,5 +51,10 @@ public class AvaliacaoSistemaTest {
     public void getAlunoTest(){
         alunoTest.getAluno();
     }
+    
+    @Test
+    public void getAvaliacaoFinal(){
+        AvaliacaoSistema.getAvalicaoFinao(alunoTest);
+    }
 
 }

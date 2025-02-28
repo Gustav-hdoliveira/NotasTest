@@ -26,5 +26,22 @@ public class AvaliacaoSistema {
         aluno.setMediaTri3(nt3);
         System.out.println("Médias calculadas e gravadas.");
     }
+    
+    public static void getAvalicaoFinao(AlunoDD aluno){
+        double mediaFinal = aluno.tri1Total + aluno.tri2Total + aluno.tri3Total;
+        if(mediaFinal == 0){
+            System.out.println("Notas abaixo da media, recuperação e atencão nescessarias!");
+        } else if(mediaFinal > 0 && mediaFinal <= 3.9999){
+            System.out.println("Notas baixissimas, recuperação e atencão nescessarias!");
+        } else if(mediaFinal >= 4 && mediaFinal <= 5.9999){
+            System.out.println("Notas abaixo da media, recuperação e atencão nescessarias!");
+        } else if(mediaFinal >= 6 && mediaFinal <= 7.9999){
+            System.out.println("Notas dentro da media, nescessario aperfeiçoamento!");
+        } else if(mediaFinal >= 8 && mediaFinal <= 9.9999){
+            System.out.println("Notas altas de bom desempenho, parabens!");
+        }else if(mediaFinal == 10){
+            System.out.println("Notas perfeitas, parabens!");
+        }
+    }
 
 }
